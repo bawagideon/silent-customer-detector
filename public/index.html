@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Silent Customer Radar — Simulator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root { --bg: #090d16; --card: #131b2e; --accent: #8b5cf6; --text: #f1f5f9; --text-dim: #94a3b8; --border: #1e293b; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: monospace, sans-serif; }
+    body { background: var(--bg); color: var(--text); padding: 24px; min-height: 100vh; }
+    .header { border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 18px; }
+    .table-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 12px; }
+    th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--border); }
+    th { color: var(--text-dim); }
+    button { background: var(--accent); color: #fff; border: none; padding: 10px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2 style="color: #fff;">🛰️ Silent Customer & Dormancy Radar</h2>
+    <div style="font-size: 12px; color: var(--text-dim)">Pre-Emptive Inactivity Monitor</div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div style="font-size: 12px; color: var(--text-dim)">Accounts Audited</div>
+      <div style="font-size: 24px; font-weight: 700;">45 Enterprise Accounts</div>
+    </div>
+    <div class="card">
+      <div style="font-size: 12px; color: var(--text-dim)">Silent Accounts (>14d)</div>
+      <div style="font-size: 24px; font-weight: 700; color: #a78bfa;">11 Accounts</div>
+    </div>
+    <div class="card">
+      <div style="font-size: 12px; color: var(--text-dim)">ACV at Risk</div>
+      <div style="font-size: 24px; font-weight: 700; color: #f87171;">$142,000 / year</div>
+    </div>
+  </div>
+
+  <div class="table-card">
+    <div style="font-weight: 700; font-size: 15px;">Dormancy Risk Cohort</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Account</th>
+          <th>Annual Value</th>
+          <th>Days Inactive</th>
+          <th>Last Touch</th>
+          <th>Automated Re-engagement Trigger</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Starlight Retail Inc</strong></td>
+          <td>$36,000</td>
+          <td style="color: #f87171;">34 Days</td>
+          <td>Inventory Sync</td>
+          <td><button onclick="alert('Sent 1-click executive check-in')">Dispatch Executive Touch</button></td>
+        </tr>
+        <tr>
+          <td><strong>Beacon Health Systems</strong></td>
+          <td>$24,000</td>
+          <td style="color: #fbbf24;">21 Days</td>
+          <td>HL7 Connector</td>
+          <td><button onclick="alert('Sent 1-click product sync')">Dispatch Support Sync</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

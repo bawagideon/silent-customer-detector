@@ -1,0 +1,11 @@
+{
+  "name": "silent-customer-detector",
+  "version": "1.0.0",
+  "description": "Inactivity detection telemetry that flags high-value accounts experiencing total login decay before they churn without filing support tickets.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "author": "Gideon Bawa <bawagideon98@gmail.com>",
+  "license": "MIT"
+}
